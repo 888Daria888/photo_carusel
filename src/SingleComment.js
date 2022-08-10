@@ -9,8 +9,8 @@ function SingleComment({ data }) {
    const [commentText, setCommentText] = useState('');
    const { text, id } = data;
    const dispatch = useDispatch();
+
    const handleUpdate = (e) => {
-      //обновленный текст комментария 
       e.preventDefault();
       // console.log('submit>>>>>>', commentText);
       dispatch(commentUpdate(commentText, id))
@@ -19,12 +19,13 @@ function SingleComment({ data }) {
       e.preventDefault();
       dispatch(commentDelete(id))
    }
-
+ 
    useEffect(() => {
       if (text) {
          setCommentText(text);
       }
    }, [text]);
+
    const handleInput = (e) => {
       setCommentText(e.target.value);
    }
@@ -39,4 +40,4 @@ function SingleComment({ data }) {
    )
 }
 
-export default SingleComment
+export default SingleComment;

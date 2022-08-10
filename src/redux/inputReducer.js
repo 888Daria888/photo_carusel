@@ -1,7 +1,7 @@
-import {INPUT_TEXT} from './types'
+import {INPUT_TEXT} from './types';
 
 const initiaState = {
-   text:''
+   text:'',
 }
 
 export const inputReduser = (state=initiaState, action)=>{
@@ -14,6 +14,6 @@ export const inputReduser = (state=initiaState, action)=>{
             text: action.text
          }
       default:
-         return state
+         return state 
    }
 }
